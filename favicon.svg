@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- OmniDesk Hub app mark (favicon: the small master hinted for a full-bleed 32 px tab icon), after Ekin Baca's monolith mark. Copyright (c) 2026 Ekin Baca. All rights reserved. -->
+  <title>OmniDesk Hub</title>
+  <desc>OmniDesk Hub monolith mark by Ekin Baca. Copyright © 2026 Ekin Baca. All rights reserved.</desc>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:title>OmniDesk Hub</dc:title>
+        <dc:creator>Ekin Baca</dc:creator>
+        <dc:rights>Copyright © 2026 Ekin Baca. All rights reserved.</dc:rights>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <clipPath id="sq">
+      <path d="M 203.261 0 L 308.739 0 C 367.267 0 396.531 0 428.033 9.961 C 462.427 22.479 489.521 49.573 502.039 83.967 C 512 115.469 512 144.733 512 203.261 L 512 308.739 C 512 367.267 512 396.531 502.039 428.033 C 489.521 462.427 462.427 489.521 428.033 502.039 C 396.531 512 367.267 512 308.739 512 L 203.261 512 C 144.733 512 115.469 512 83.967 502.039 C 49.573 489.521 22.479 462.427 9.961 428.033 C 0 396.531 0 367.267 0 308.739 L 0 203.261 C 0 144.733 0 115.469 9.961 83.967 C 22.479 49.573 49.573 22.479 83.967 9.961 C 115.469 0 144.733 0 203.261 0 Z"/>
+    </clipPath>
+    <linearGradient id="bg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="512">
+      <stop offset="0" stop-color="#2A2621"/>
+      <stop offset="1" stop-color="#12100E"/>
+    </linearGradient>
+    <linearGradient id="rim" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="512">
+      <stop offset="0" stop-color="#FFF0DC" stop-opacity="0.3"/>
+      <stop offset="0.5" stop-color="#FFF0DC" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FFF0DC" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="fL" gradientUnits="userSpaceOnUse" x1="80" y1="64" x2="256" y2="448">
+      <stop offset="0" stop-color="#94877A"/>
+      <stop offset="1" stop-color="#5E564C"/>
+    </linearGradient>
+    <linearGradient id="fR" gradientUnits="userSpaceOnUse" x1="256" y1="64" x2="432" y2="448">
+      <stop offset="0" stop-color="#6B6258"/>
+      <stop offset="1" stop-color="#3A342E"/>
+    </linearGradient>
+    <linearGradient id="seam" gradientUnits="userSpaceOnUse" x1="256" y1="64" x2="256" y2="448">
+      <stop offset="0" stop-color="#FF9E73"/>
+      <stop offset="0.5" stop-color="#FF5500"/>
+      <stop offset="1" stop-color="#D84400"/>
+    </linearGradient>
+    <radialGradient id="hT" gradientUnits="userSpaceOnUse" cx="256" cy="64" r="48">
+      <stop offset="0" stop-color="#FF9E73" stop-opacity="0.7"/>
+      <stop offset="0.4" stop-color="#FF9E73" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#FF9E73" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hB" gradientUnits="userSpaceOnUse" cx="256" cy="448" r="48">
+      <stop offset="0" stop-color="#FF5500" stop-opacity="0.7"/>
+      <stop offset="0.4" stop-color="#FF5500" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#FF5500" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowN" filterUnits="userSpaceOnUse" x="150" y="0" width="212" height="512" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <linearGradient id="edgeHi" gradientUnits="userSpaceOnUse" x1="256" y1="64" x2="80" y2="320">
+      <stop offset="0" stop-color="#FFF1E0" stop-opacity="0.85"/>
+      <stop offset="0.45" stop-color="#FFF1E0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFF1E0" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="edgeHiR" gradientUnits="userSpaceOnUse" x1="256" y1="64" x2="432" y2="192">
+      <stop offset="0" stop-color="#FFF1E0" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#FFF1E0" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+    <polygon points="256,64 256,448 80,320 80,192" fill="url(#fL)"/>
+    <polygon points="256,64 432,192 432,320 256,448" fill="url(#fR)"/>
+    <polygon points="256,64 432,192 419.2,198.52 256,79.83" fill="#FFEBD2" fill-opacity="0.14"/>
+    <polygon points="432,192 432,320 419.2,313.48 419.2,198.52" fill="#000000" fill-opacity="0.17"/>
+    <polygon points="432,320 256,448 256,432.17 419.2,313.48" fill="#000000" fill-opacity="0.44"/>
+    <polygon points="256,448 80,320 92.8,313.48 256,432.17" fill="#000000" fill-opacity="0.2"/>
+    <polygon points="80,320 80,192 92.8,198.52 92.8,313.48" fill="#FFEBD2" fill-opacity="0.12"/>
+    <polygon points="80,192 256,64 256,79.83 92.8,198.52" fill="#FFEBD2" fill-opacity="0.35"/>
+    <polygon points="256,133.82 256,378.18 144,296.73 144,215.27" fill="#0B0A09"/>
+    <polygon points="256,133.82 368,215.27 368,296.73 256,378.18" fill="#060505"/>
+    <polygon points="256,121.16 378.24,210.06 368,215.27 256,133.82" fill="#000000" fill-opacity="0.23"/>
+    <polygon points="378.24,210.06 378.24,301.94 368,296.73 368,215.27" fill="#FFEBD2" fill-opacity="0.11"/>
+    <polygon points="378.24,301.94 256,390.84 256,378.18 368,296.73" fill="#FFEBD2" fill-opacity="0.31"/>
+    <polygon points="256,390.84 133.76,301.94 144,296.73 256,378.18" fill="#FFEBD2" fill-opacity="0.13"/>
+    <polygon points="133.76,301.94 133.76,210.06 144,215.27 144,296.73" fill="#000000" fill-opacity="0.19"/>
+    <polygon points="133.76,210.06 256,121.16 256,133.82 144,215.27" fill="#000000" fill-opacity="0.49"/>
+    <polyline points="80,320 80,192 256,64" fill="none" stroke="url(#edgeHi)" stroke-width="9.6" stroke-linejoin="round"/>
+    <polyline points="256,64 432,192" fill="none" stroke="url(#edgeHiR)" stroke-width="6.4" stroke-linecap="round"/>
+    <rect x="235.52" y="57.6" width="40.96" height="396.8" rx="20.48" fill="url(#seam)" opacity="0.25" filter="url(#glowN)"/>
+    <rect x="243.2" y="64" width="25.6" height="384" fill="url(#seam)" opacity="0.95"/>
+    <circle cx="256" cy="64" r="48" fill="url(#hT)"/>
+    <circle cx="256" cy="448" r="48" fill="url(#hB)"/>
+    <circle cx="256" cy="64" r="28.8" fill="#FFD2BC"/>
+    <circle cx="256" cy="448" r="28.8" fill="#FF7A3A"/>
+    <path d="M 203.261 0 L 308.739 0 C 367.267 0 396.531 0 428.033 9.961 C 462.427 22.479 489.521 49.573 502.039 83.967 C 512 115.469 512 144.733 512 203.261 L 512 308.739 C 512 367.267 512 396.531 502.039 428.033 C 489.521 462.427 462.427 489.521 428.033 502.039 C 396.531 512 367.267 512 308.739 512 L 203.261 512 C 144.733 512 115.469 512 83.967 502.039 C 49.573 489.521 22.479 462.427 9.961 428.033 C 0 396.531 0 367.267 0 308.739 L 0 203.261 C 0 144.733 0 115.469 9.961 83.967 C 22.479 49.573 49.573 22.479 83.967 9.961 C 115.469 0 144.733 0 203.261 0 Z" fill="none" stroke="url(#rim)" stroke-width="17.6"/>
+  </g>
+</svg>

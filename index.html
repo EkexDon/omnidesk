@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>OmniDesk Hub — your whole desk in one calm Mac window</title>
+  <meta name="description" content="Mail, calendar, tasks, docs, notes, PDFs, a whiteboard, slides and music in one Mac window. Local-first, no account, live group workspaces. Free for macOS.">
+  <link rel="canonical" href="https://ekexdon.github.io/omnidesk/">
+  <meta name="robots" content="index, follow">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F6F4EF" media="(prefers-color-scheme: light)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OmniDesk Hub">
+  <meta property="og:title" content="OmniDesk Hub — your whole desk in one calm Mac window">
+  <meta property="og:description" content="Mail, calendar, tasks, documents, notes, PDFs, a whiteboard, slides and music, side by side. Local-first, no account. Free for macOS.">
+  <meta property="og:url" content="https://ekexdon.github.io/omnidesk/">
+  <meta property="og:image" content="https://ekexdon.github.io/omnidesk/media/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="OmniDesk Hub: its mark and the words “Your whole desk, in one calm window.” beside a real window of the app — Mail open, with the rail of every module">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OmniDesk Hub — your whole desk in one calm Mac window">
+  <meta name="twitter:description" content="Mail, calendar, tasks, documents, notes, PDFs, a whiteboard, slides and music, side by side. Local-first, no account.">
+  <meta name="twitter:image" content="https://ekexdon.github.io/omnidesk/media/og-image.png">
+  <meta name="twitter:image:alt" content="OmniDesk Hub: its mark and the words “Your whole desk, in one calm window.” beside a real window of the app — Mail open, with the rail of every module">
+
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/geist-mono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "OmniDesk Hub",
+    "operatingSystem": "macOS 13 or later",
+    "applicationCategory": "BusinessApplication",
+    "description": "Mail, calendar, tasks, documents, notes, PDFs, a whiteboard, slides and music side by side in one Mac window. Local-first, no account.",
+    "url": "https://ekexdon.github.io/omnidesk/",
+    "downloadUrl": "https://github.com/EkexDon/omnidesk/releases/latest",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "author": { "@type": "Person", "name": "Ekin Baca" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="nav__bar wrap">
+      <a class="brand" href="#top" aria-label="OmniDesk Hub — back to the top">
+        <img class="mark" src="media/mark.svg" width="28" height="28" alt="">
+        <span class="brand__name">OmniDesk Hub</span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Sections">
+        <a href="#modules">Modules</a>
+        <a href="#connected">Connected</a>
+        <a href="#together">Groups</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#install">Install</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__end">
+        <a class="btn btn--ghost btn--sm" data-download href="https://github.com/EkexDon/omnidesk/releases/latest/download/OmniDesk-Hub-mac-arm64.dmg">Download</a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle>
+          <span class="visually-hidden">Menu</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path class="l1" d="M3 6h12"/><path class="l2" d="M3 12h12"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <p class="eyebrow hero__eyebrow">For Mac · Free · No account</p>
+        <h1 class="hero__title" id="hero-title">Your whole desk, <em>in one calm window<span class="dot">.</span></em></h1>
+        <div class="hero__copy">
+          <p class="hero__lede">OmniDesk Hub puts your mail, calendar, tasks, documents, notes, PDFs, whiteboard, slides and music side by side in one Mac window — and lets every one of them hand its work to the others.</p>
+          <div class="download" data-download-block>
+            <a class="btn btn--primary btn--lg" data-download href="https://github.com/EkexDon/omnidesk/releases/latest/download/OmniDesk-Hub-mac-arm64.dmg">
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 2.5v9m0 0-3.5-3.5M9 11.5l3.5-3.5M3 14.5h12"/></svg>
+              Download for macOS
+            </a>
+            <div class="download__meta">
+              <p class="download__release" data-release hidden>Version <span data-release-version></span> · <span data-release-size></span> · <span data-release-date></span></p>
+              <p class="download__req">Apple Silicon · macOS 13 Ventura or later</p>
+              <p class="download__intel" data-intel hidden><a data-intel-link href="https://github.com/EkexDon/omnidesk/releases/latest">Intel Mac? Get the Intel build</a></p>
+            </div>
+            <p class="download__platform" data-platform-note hidden>OmniDesk Hub runs on macOS only, for now. The download is a Mac disk image — you can still save it for later.</p>
+          </div>
+        </div>
+        <dl class="hero__facts" aria-label="At a glance">
+          <div><dt>9</dt><dd>modules in one window — from mail to music</dd></div>
+          <div><dt>3</dt><dd>panes side by side, with drag and drop between them</dd></div>
+          <div><dt>0</dt><dd>sign-ups. No OmniDesk account — your data stays on your Mac</dd></div>
+        </dl>
+      </div>
+
+      <figure class="trailer">
+        <div class="trailer__frame">
+          <video class="trailer__video" data-video="hero" muted loop playsinline controls preload="none" width="1920" height="1200" poster="media/trailer-poster.jpg" aria-label="OmniDesk Hub trailer: the mark; Home, then Mail with an invitation, Calendar and the whiteboard; an email dragged onto Today becomes a task, then a time block on Thursday; one search across modules; a document and a note typed; a highlight in a PDF landing in a note; a sticky and a pen stroke; a whiteboard frame sent to Slides and presented; the equalizer; two Macs side by side editing one document and one board together; the end card">
+            <source src="media/trailer.webm" type="video/webm">
+            <source src="media/trailer.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption class="trailer__caption">A short tour of the app, shown with its built-in sample workspace.</figcaption>
+      </figure>
+    </section>
+
+    <section class="modules" id="modules" aria-labelledby="modules-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">The desk</p>
+            <h2 class="display reveal" id="modules-title">One window instead of eleven apps.</h2>
+          </div>
+          <p class="replaced reveal">
+            <span class="gone">A mail client</span>, <span class="gone">a calendar</span>, <span class="gone">a Kanban board</span>,
+            <span class="gone">a daily checklist</span>, <span class="gone">a word processor</span>, <span class="gone">a notes app</span>,
+            <span class="gone">a voice recorder</span>, <span class="gone">a PDF annotator</span>, <span class="gone">a whiteboard</span>,
+            <span class="gone">a slide editor</span> and <span class="gone">a music player</span> — <span class="replaced__now">as one app, in panes you arrange yourself.</span>
+          </p>
+        </header>
+
+        <p class="chapter reveal"><span>01</span> Write</p>
+
+        <article class="mod mod--a" id="docs" aria-labelledby="docs-title">
+          <div class="mod__media reveal">
+            <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/docs.jpg" aria-label="Docs: a paragraph of the quarterly report, a sentence typed into it with a figure in bold">
+              <source src="media/features/docs.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="mod__copy reveal">
+            <p class="mod__kicker">Docs</p>
+            <h3 class="mod__title" id="docs-title">A word processor on real pages.</h3>
+            <p>Write on sheets of paper that paginate as you type — titles, headings, quotes, tables, images and checklists in four bundled typefaces.</p>
+            <ul class="points">
+              <li>Templates, version history and a distraction-free focus mode</li>
+              <li>Export to PDF, Word, Markdown or HTML; import .docx, Markdown and HTML</li>
+              <li>Drop a mail, a note or a PDF quote in and it arrives with a link back</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="mod mod--b" id="notes" aria-labelledby="notes-title">
+          <div class="mod__copy reveal">
+            <p class="mod__kicker">Notes</p>
+            <h3 class="mod__title" id="notes-title">Quick notes that link back.</h3>
+            <p>A scratchpad that grows into a knowledge base: #tags, [[links]] that follow every rename, backlinks under each note and a graph of how it all connects.</p>
+            <ul class="points">
+              <li>Record voice memos straight into a note</li>
+              <li>Quick capture with ⇧⌘N — or ⇧⌘Space from anywhere on your Mac</li>
+              <li>Markdown shortcuts, code blocks, tables and nested folders</li>
+            </ul>
+          </div>
+          <div class="mod__media reveal">
+            <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/notes.jpg" aria-label="Notes: the meeting-prep note, a [[link]] picked from the suggestions and a #tag">
+              <source src="media/features/notes.mp4" type="video/mp4">
+            </video>
+          </div>
+        </article>
+
+        <p class="chapter reveal"><span>02</span> Make</p>
+
+        <article class="mod mod--wide" id="whiteboard" aria-labelledby="whiteboard-title">
+          <div class="mod__media reveal">
+            <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/whiteboard.jpg" aria-label="Whiteboard: beside the brainstorm’s moodboard, a sticky placed and typed and a pen loop drawn around it">
+              <source src="media/features/whiteboard.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="mod__copy mod__copy--row reveal">
+            <div>
+              <p class="mod__kicker">Whiteboard</p>
+              <h3 class="mod__title" id="whiteboard-title">An infinite canvas for the messy part.</h3>
+            </div>
+            <ul class="points points--cols">
+              <li>Stickies, shapes, freehand ink, images and frames</li>
+              <li>Arrows that stay attached when you move things</li>
+              <li>Cards for anything on your desk — a mail, a task, a song that plays on the board</li>
+              <li>Smart guides, templates and PNG export</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="mod mod--a mod--flip" id="slides" aria-labelledby="slides-title">
+          <div class="mod__media reveal">
+            <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/slides.jpg" aria-label="Slides: walking a deck in the slide sorter, each slide on the canvas beside it">
+              <source src="media/features/slides.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="mod__copy reveal">
+            <p class="mod__kicker">Slides</p>
+            <h3 class="mod__title" id="slides-title">Decks, built from what you already made.</h3>
+            <p>A slide sorter, themes, text that fits itself to its box and speaker notes. Present full screen with a presenter view on a second display.</p>
+            <ul class="points">
+              <li>Drop in a whiteboard frame, an image, or a task board as a chart that links back to it</li>
+              <li>Turn a document or note into a deck from its headings</li>
+              <li>Export to PDF, PowerPoint or PNG</li>
+            </ul>
+          </div>
+        </article>
+
+        <p class="chapter reveal"><span>03</span> Plan</p>
+
+        <div class="pair pair--plan">
+          <article class="mod mod--card" id="tasks" aria-labelledby="tasks-title">
+            <div class="mod__media reveal">
+              <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/tasks.jpg" aria-label="Tasks: a task typed into Today with its date, priority and label understood, then one checked off">
+                <source src="media/features/tasks.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="mod__copy reveal">
+              <p class="mod__kicker">Tasks</p>
+              <h3 class="mod__title" id="tasks-title">Kanban for projects, a checklist for today.</h3>
+              <p>Boards with columns, WIP limits and checklists; a Today list that carries yesterday’s leftovers over. Type <kbd class="inline-code">Call Sam tomorrow 3pm !high #work</kbd> and the date, priority and label are set for you — in English or German.</p>
+            </div>
+          </article>
+          <article class="mod mod--card mod--offset" id="calendar" aria-labelledby="calendar-title">
+            <div class="mod__media reveal">
+              <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/calendar.jpg" aria-label="Calendar: the week from Sunday to Thursday, eleven to six, an event dragged a day on and back">
+                <source src="media/features/calendar.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="mod__copy reveal">
+              <p class="mod__kicker">Calendar</p>
+              <h3 class="mod__title" id="calendar-title">Your week at a glance.</h3>
+              <p>Day, week, month and agenda. Drag to create, move and resize; repeating events; .ics import and export, calendar subscriptions and mail invitations you answer from the event.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="chapter reveal"><span>04</span> Read &amp; reply</p>
+
+        <div class="pair pair--read">
+          <article class="mod mod--card" id="mail" aria-labelledby="mail-title">
+            <div class="mod__media reveal">
+              <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/mail.jpg" aria-label="Mail: a calendar invitation, accepted, then the next message">
+                <source src="media/features/mail.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="mod__copy reveal">
+              <p class="mod__kicker">Mail</p>
+              <h3 class="mod__title" id="mail-title">Every inbox in one list.</h3>
+              <p>A unified inbox for your IMAP accounts — iCloud, Gmail, Fastmail, Yahoo, GMX and others — with conversations, follow-up reminders and local search. Remote images stay blocked until you allow them.</p>
+            </div>
+          </article>
+          <article class="mod mod--card" id="pdf" aria-labelledby="pdf-title">
+            <div class="mod__media reveal">
+              <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/pdf.jpg" aria-label="PDF: a sentence of the field guide selected and highlighted">
+                <source src="media/features/pdf.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="mod__copy reveal">
+              <p class="mod__kicker">PDF</p>
+              <h3 class="mod__title" id="pdf-title">Read with a pen in hand.</h3>
+              <p>Highlights, underlines and sticky notes, find, outline and thumbnails. <em>Take notes</em> opens a note right beside the page, and the annotated PDF exports with your marks in it.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="chapter reveal"><span>05</span> Listen</p>
+
+        <article class="mod mod--music" id="music" aria-labelledby="music-title">
+          <div class="mod__copy reveal">
+            <p class="mod__kicker">Music</p>
+            <h3 class="mod__title" id="music-title">A soundtrack for the work.</h3>
+            <p>Your own music library — MP3, AAC, FLAC, WAV, Ogg and Opus — with playlists, smart lists, media keys and a 10-band equalizer over a live spectrum.</p>
+            <ul class="points">
+              <li><strong>Jam sessions:</strong> friends anywhere join with a room code and hear what you play, live — and can save a song they like</li>
+              <li><strong>Group soundtrack:</strong> one member DJs a shared queue and everyone in the group hears it softly while working</li>
+            </ul>
+          </div>
+          <div class="mod__media reveal">
+            <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/music.jpg" aria-label="Music: the equalizer switched on, its curve shaped band by band over the live spectrum, then reset to flat">
+              <source src="media/features/music.mp4" type="video/mp4">
+            </video>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="connected" id="connected" aria-labelledby="connected-title">
+      <div class="wrap">
+        <div class="connected__grid">
+          <header class="connected__head">
+            <p class="eyebrow reveal">Cross-module</p>
+            <h2 class="display reveal" id="connected-title">Everything talks to everything.</h2>
+            <p class="section-lede reveal">The modules aren’t tabs of separate apps. Whatever you’re looking at can become something else — and keeps a link back to where it came from.</p>
+          </header>
+          <div class="connected__media reveal">
+            <div class="connected__frame">
+              <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/crossmodule.jpg" aria-label="Cross-module: an email dragged from Mail onto Today becomes a task whose drawer says it was converted from that email">
+                <source src="media/features/crossmodule.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="sendto" aria-hidden="true">
+              <p class="sendto__head">Send to</p>
+              <ul>
+                <li><svg viewBox="0 0 16 16"><rect x="2.5" y="3.5" width="11" height="10" rx="2"/><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3"/></svg>Event</li>
+                <li class="is-on"><svg viewBox="0 0 16 16"><rect x="2.5" y="2.5" width="11" height="11" rx="2.5"/><path d="m5.5 8 1.8 1.8L10.8 6"/></svg>Task</li>
+                <li><svg viewBox="0 0 16 16"><path d="M4 2.5h5l3 3v8H4z"/><path d="M6 8.5h4M6 11h4"/></svg>Document</li>
+                <li><svg viewBox="0 0 16 16"><path d="M3.5 2.5h9v7l-4 4h-5z"/><path d="M8.5 13.5v-4h4"/></svg>Note</li>
+                <li><svg viewBox="0 0 16 16"><circle cx="5" cy="5" r="2.5"/><rect x="9" y="9" width="4.5" height="4.5" rx="1"/><path d="M6.5 7 9.5 10"/></svg>Whiteboard</li>
+                <li><svg viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="8" rx="1.5"/><path d="M8 11v2.5M5.5 13.5h5"/></svg>Slides</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="ways">
+            <li class="way reveal">
+              <span class="way__glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M4 10h10m0 0-4-4m4 4-4 4M16 4v12"/></svg></span>
+              <h3>Send to…</h3>
+              <p>Right-click a mail, a highlight, a note or a card and send it to a task, an event, a document, a note, a board, a deck — or a new mail.</p>
+            </li>
+            <li class="way reveal">
+              <span class="way__glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 3.5h-2a1.5 1.5 0 0 0-1.5 1.5v2M13 3.5h2A1.5 1.5 0 0 1 16.5 5v2M3.5 13v2A1.5 1.5 0 0 0 5 16.5h2M9 9l7.5 7.5M9 9v5m0-5h5"/></svg></span>
+              <h3>Drag and drop</h3>
+              <p>Drop a mail on a time slot to plan it, a PDF passage into a note as a quote, a whiteboard frame onto a slide.</p>
+            </li>
+            <li class="way reveal">
+              <span class="way__glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="12" rx="2"/><path d="M8 4v12M12.5 4v12"/></svg></span>
+              <h3>Split panes</h3>
+              <p>Up to three modules side by side. Start from a layout like <em>Research</em> (PDF | Notes) or <em>Plan</em> (Calendar | Tasks) and save your own.</p>
+            </li>
+            <li class="way reveal">
+              <span class="way__glyph way__glyph--key" aria-hidden="true">⌘K</span>
+              <h3>One palette</h3>
+              <p>Jump to any module, run any action or search across mail, notes, documents, tasks and boards from one field.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flows reveal" role="group" aria-labelledby="flows-title">
+          <p class="flows__title" id="flows-title">A few things that take one step</p>
+          <ul class="flows__list">
+            <li><span>A mail thread</span><span class="flows__arrow" aria-hidden="true">→</span><span>a formatted document</span></li>
+            <li><span>Five PDF highlights</span><span class="flows__arrow" aria-hidden="true">→</span><span>one note with five quotes</span></li>
+            <li><span>A task board</span><span class="flows__arrow" aria-hidden="true">→</span><span>a chart on a slide</span></li>
+            <li><span>A document outline</span><span class="flows__arrow" aria-hidden="true">→</span><span>a slide deck</span></li>
+            <li><span>A calendar invitation</span><span class="flows__arrow" aria-hidden="true">→</span><span>accepted, reply sent</span></li>
+            <li><span>Anything at all</span><span class="flows__arrow" aria-hidden="true">→</span><span>a task, with a link back</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="together" id="together" aria-labelledby="together-title">
+      <div class="wrap">
+        <div class="together__top">
+          <header class="together__head">
+            <p class="eyebrow reveal">Group Workspaces</p>
+            <h2 class="display reveal" id="together-title">Work together, with no server in the middle.</h2>
+            <p class="section-lede reveal">A group workspace is a shared space for a team, a class or a family. It syncs directly between the members’ Macs — end-to-end encrypted, with no account and nothing stored on anyone’s server. Your Personal workspace never leaves your Mac.</p>
+          </header>
+
+          <div class="live reveal" aria-hidden="true">
+            <div class="live__bar">
+              <span class="live__title">Launch plan</span>
+              <span class="live__people"><span class="avatar avatar--a">A</span><span class="avatar avatar--b">B</span><span class="live__pill"><i></i>Live · 2</span></span>
+            </div>
+            <div class="live__page">
+              <p class="live__h">Milestones for October 14</p>
+              <p>Beta closes on Friday<span class="caret caret--a"><b>Ann</b></span> and the survey goes out the same day. Pricing page lives behind a flag until <mark class="sel sel--b">the press kit is signed off</mark><span class="caret caret--b"></span>.</p>
+              <p class="live__muted">Open risks: the payment provider review can take five business days.</p>
+            </div>
+            <div class="live__invite">
+              <span class="live__label">Invite code</span>
+              <code>OMNI-4K7Q-M2XD-9HPA-…</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="together__body">
+          <div class="together__media reveal">
+            <video class="mod__video" data-video muted loop playsinline controls preload="none" width="1440" height="900" data-poster="media/features/groups.jpg" aria-label="Group Workspaces: a shared board on Jonas’s Mac while Mara moves a sticky and back — her named cursor and the card move live">
+              <source src="media/features/groups.mp4" type="video/mp4">
+            </video>
+          </div>
+          <ul class="facts">
+            <li class="reveal"><h3>Live co-editing</h3><p>Type in the same document or note at once and see everyone’s caret and selection in their color. Whiteboards and decks move live, too.</p></li>
+            <li class="reveal"><h3>Presence</h3><p>Avatars show who is on a board or slide, “Ann is editing” sits on the sticky she types in, and you can follow a presenter step by step.</p></li>
+            <li class="reveal"><h3>Shared tasks and calendar</h3><p>Cards move on your board as others drag them, tasks can be assigned, the group calendar says who added what. Your Today list stays yours.</p></li>
+            <li class="reveal"><h3>A group soundtrack</h3><p>One member DJs a shared queue; the others hear it softly in their dock, each at their own volume.</p></li>
+            <li class="reveal"><h3>Invite by code</h3><p>Share an <code class="inline-code">OMNI-…</code> code or an invite file. Remove a member and the old code stops working for everyone.</p></li>
+            <li class="reveal"><h3>Encrypted end to end</h3><p>Public relays only help members find each other. They see a hashed topic, IP addresses and timing — never content, names or devices.</p></li>
+          </ul>
+        </div>
+
+        <p class="limits reveal"><strong>Good to know:</strong> changes travel while at least two members are online at the same time — anyone online passes them on, and an always-on Mac works as a mailbox. Groups suit about 2–8 people; very strict company networks may need a TURN server.</p>
+      </div>
+    </section>
+
+    <section class="privacy" id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap privacy__grid">
+        <header class="privacy__head">
+          <p class="eyebrow reveal">Local-first</p>
+          <h2 class="display reveal" id="privacy-title">Your data lives on your Mac.</h2>
+          <p class="section-lede reveal">Mail, events, tasks, documents, notes, boards and decks are stored in a folder on your Mac — no OmniDesk account, and nothing copied to a server of ours. Here is everything that goes over the network, and when.</p>
+        </header>
+        <dl class="net">
+          <div class="net__row reveal">
+            <dt>When you add a mail account</dt>
+            <dd>OmniDesk talks to that provider’s IMAP and SMTP servers, on the sync interval you choose.</dd>
+          </div>
+          <div class="net__row reveal">
+            <dt>When you load images in a mail</dt>
+            <dd>The images of that message are fetched — only after you click <em>Load images</em>, allow the sender or choose to always load them. Never from your local network.</dd>
+          </div>
+          <div class="net__row reveal">
+            <dt>When you subscribe to a calendar</dt>
+            <dd>That feed’s address is fetched on the refresh interval you set.</dd>
+          </div>
+          <div class="net__row reveal">
+            <dt>When you’re in a group or a Jam</dt>
+            <dd>Public relays help the Macs find each other (by default the MQTT brokers of HiveMQ, EMQX and Eclipse Mosquitto) and STUN servers from Google and Cloudflare find a direct route. The content then travels encrypted, straight between the Macs. A TURN relay is used only if you add one.</dd>
+          </div>
+          <div class="net__row reveal">
+            <dt>When you open or fetch a link</dt>
+            <dd>It goes where the link points, when you ask — web links open in your browser.</dd>
+          </div>
+          <div class="net__row net__row--none reveal">
+            <dt>Everything else</dt>
+            <dd><strong>Nothing.</strong> No analytics, no telemetry, no crash reports, no update pings, no account.</dd>
+          </div>
+        </dl>
+        <p class="privacy__site reveal"><svg class="privacy__lock" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><rect x="2.5" y="6" width="9" height="6.5" rx="1.5"/><path d="M4.5 6V4.5a2.5 2.5 0 0 1 5 0V6"/></svg>The same goes for this website: no cookies, no trackers, fonts served from here. Its only outside request asks GitHub for the latest version number.</p>
+      </div>
+    </section>
+
+    <section class="install" id="install" aria-labelledby="install-title">
+      <div class="wrap">
+        <header class="install__head">
+          <div>
+            <p class="eyebrow reveal">Install</p>
+            <h2 class="display reveal" id="install-title">Up and running in a minute.</h2>
+          </div>
+          <div class="download download--end reveal" data-download-block>
+            <a class="btn btn--primary btn--lg" data-download href="https://github.com/EkexDon/omnidesk/releases/latest/download/OmniDesk-Hub-mac-arm64.dmg">
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 2.5v9m0 0-3.5-3.5M9 11.5l3.5-3.5M3 14.5h12"/></svg>
+              Download for macOS
+            </a>
+            <div class="download__meta">
+              <p class="download__release" data-release hidden>Version <span data-release-version></span> · <span data-release-size></span> · <span data-release-date></span></p>
+              <p class="download__req">Apple Silicon · macOS 13 Ventura or later</p>
+              <p class="download__intel" data-intel hidden><a data-intel-link href="https://github.com/EkexDon/omnidesk/releases/latest">Intel Mac? Get the Intel build</a></p>
+            </div>
+            <p class="download__platform" data-platform-note hidden>OmniDesk Hub runs on macOS only, for now.</p>
+          </div>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal"><span class="step__n" aria-hidden="true">1</span><h3>Download</h3><p>Get <code class="inline-code">OmniDesk-Hub-mac-arm64.dmg</code> and open it.</p></li>
+          <li class="step reveal"><span class="step__n" aria-hidden="true">2</span><h3>Drag to Applications</h3><p>Drag <strong>OmniDesk Hub</strong> onto the Applications folder in the window that opens.</p></li>
+          <li class="step reveal"><span class="step__n" aria-hidden="true">3</span><h3>Open it once</h3><p>macOS says it can’t verify the app. Click <strong>Done</strong> (<strong>Cancel</strong> on macOS 13–14) — that’s expected for now.</p></li>
+          <li class="step reveal"><span class="step__n" aria-hidden="true">4</span><h3>Open Anyway</h3><p><strong>System Settings → Privacy &amp; Security</strong>, scroll down, click <strong>Open Anyway</strong> next to OmniDesk Hub and confirm. Only the first time.</p><p class="step__note">If macOS says the app is damaged, use the <a href="#xattr">Terminal fix</a> below.</p></li>
+        </ol>
+
+        <div class="install__more">
+          <p class="install__why reveal"><strong>Why the warning?</strong> OmniDesk Hub isn’t notarized by Apple yet, so macOS can’t check who made it and asks you to confirm once. On macOS 13 and 14 you can also Control-click the app in Applications, choose <strong>Open</strong> and confirm.</p>
+          <details class="terminal reveal" id="xattr">
+            <summary>Still won’t open, or macOS says the app “is damaged”?</summary>
+            <p>That’s the download quarantine flag. Remove it for this one app in Terminal, then open OmniDesk Hub again:</p>
+            <div class="terminal__cmd">
+              <code id="xattr-cmd">xattr -dr com.apple.quarantine "/Applications/OmniDesk Hub.app"</code>
+              <button class="btn btn--ghost btn--sm" type="button" data-copy="xattr-cmd">Copy</button>
+            </div>
+            <p class="terminal__status" data-copy-status role="status" aria-live="polite"></p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq__grid">
+        <header class="faq__head">
+          <p class="eyebrow reveal">FAQ</p>
+          <h2 class="display reveal" id="faq-title">Fair questions.</h2>
+        </header>
+        <div class="faq__list">
+          <details class="qa reveal">
+            <summary>Is it free?</summary>
+            <p>Yes. OmniDesk Hub is free to download and use — no subscription, no account, no ads.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Is there a Windows or Linux version?</summary>
+            <p>Not yet. OmniDesk Hub is built and tested on macOS: Apple Silicon Macs with macOS 13 Ventura or later. If an Intel build is published, the download buttons on this page offer it automatically.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Why does macOS warn me the first time?</summary>
+            <p>The app isn’t notarized by Apple yet, so macOS can’t verify the developer and asks you to confirm once — see <a href="#install">Install</a> for the two clicks. After that it opens like any other app.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Where is my data, and how do I back it up?</summary>
+            <p>Everything lives in <code class="inline-code">~/Library/Application Support/OmniDesk Hub</code> — <em>Settings → About</em> shows the folder and reveals it in Finder. Time Machine includes it. To move to a new Mac, use Migration Assistant — it also brings the Keychain, where OmniDesk Hub keeps your mail passwords and group keys. If you copy the folder by hand, sign in to your mail accounts again and rejoin your groups with a new invite from a member. Your music stays in your own folders.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>How do I update?</summary>
+            <p>OmniDesk Hub never checks for updates on its own. Download the latest version from this page or <a href="https://github.com/EkexDon/omnidesk/releases">GitHub Releases</a> and drag it over the old app in Applications — your data stays where it is.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Which mail accounts work?</summary>
+            <p>Any IMAP and SMTP account that signs in with a password or an app password — iCloud, Gmail, Fastmail, Yahoo, GMX, WEB.DE or your own server. Sign-in through a browser (OAuth) isn’t supported yet, so work accounts that only allow that can’t connect.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Do the others in my group need an account?</summary>
+            <p>No. Everyone installs OmniDesk Hub and joins with the invite code or file. There is no sign-up and no server that stores your group’s content.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Is OmniDesk Hub open source?</summary>
+            <p>No. It’s free to use, but the source code isn’t public — all rights reserved. Releases are published on <a href="https://github.com/EkexDon/omnidesk/releases">GitHub</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <img class="mark" src="media/mark.svg" width="24" height="24" alt="">
+        <span>OmniDesk Hub</span>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a data-download href="https://github.com/EkexDon/omnidesk/releases/latest/download/OmniDesk-Hub-mac-arm64.dmg">Download</a>
+        <a href="https://github.com/EkexDon/omnidesk/releases">All releases</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#top">Back to top</a>
+      </nav>
+      <p class="footer__legal">© 2026 Ekin Baca · All rights reserved. Mac and macOS are trademarks of Apple Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>
