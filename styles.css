@@ -266,6 +266,7 @@ section[id], article[id], details[id] { scroll-margin-top: calc(var(--nav-h) + 2
 .download__release { color: var(--text); font-variant-numeric: tabular-nums; }
 .download__intel a { color: var(--text-2); text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
 .download__intel a:hover { color: var(--text); text-decoration-color: var(--accent); }
+.download__also a[hidden] { display: none; }
 .hero .download { margin-top: 28px; }
 .download__platform { flex-basis: 100%; max-width: 36em; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-strong); background: var(--surface-1); font-size: 14px; color: var(--text-2); }
 
@@ -482,6 +483,7 @@ section[id], article[id], details[id] { scroll-margin-top: calc(var(--nav-h) + 2
 }
 .way__glyph svg { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .way__glyph--key { font: 600 12px/1 var(--font-mono); letter-spacing: -0.02em; }
+.way__glyph--key[data-pc] { font-size: 10px; letter-spacing: -0.04em; white-space: nowrap; }
 .way h3 { font: 600 17px/1.3 var(--font-sans); letter-spacing: -0.015em; }
 .way p { margin-top: 6px; font-size: 15px; line-height: 1.6; color: var(--text-2); }
 .way em { font-style: normal; color: var(--text); }
@@ -585,6 +587,10 @@ section[id], article[id], details[id] { scroll-margin-top: calc(var(--nav-h) + 2
 .install__head > div:first-child { grid-column: 1 / span 6; }
 .download--end { grid-column: 8 / span 5; margin-top: 0; justify-self: end; }
 .steps { margin-top: clamp(56px, 7vw, 88px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 32px; counter-reset: none; }
+/* The steps per OS: a Mac's and Windows' (site.js hides the other OS's for Mac and Windows visitors). */
+.steps__for { margin-top: clamp(56px, 7vw, 88px); font: 600 11px/1.3 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); }
+.steps--after-for { margin-top: 16px; }
+.steps[hidden], .steps__for[hidden], .install__more[hidden], .download__req[hidden], .download__intel[hidden] { display: none; }
 .step { padding-top: 20px; border-top: 1px solid var(--border-strong); }
 .step__n { display: block; font: 400 56px/1 var(--font-display); letter-spacing: -0.02em; color: var(--text-3); }
 .step h3 { margin-top: 20px; font: 600 17px/1.3 var(--font-sans); letter-spacing: -0.015em; }

@@ -13,7 +13,13 @@
   var API_LATEST = 'https://api.github.com/repos/' + REPO + '/releases/latest'
   var RELEASES_PAGE = 'https://github.com/' + REPO + '/releases'
   var ASSET_PREFIX = ('https://github.com/' + REPO + '/releases/download/').toLowerCase()
-  var ASSETS = { arm: 'OmniDesk-Hub-mac-arm64.dmg', armZip: 'OmniDesk-Hub-mac-arm64.zip', intel: 'OmniDesk-Hub-mac-x64.dmg' }
+  var LATEST_DOWNLOAD = 'https://github.com/' + REPO + '/releases/latest/download/'
+  var ASSETS = {
+    arm: 'OmniDesk-Hub-mac-arm64.dmg',
+    armZip: 'OmniDesk-Hub-mac-arm64.zip',
+    intel: 'OmniDesk-Hub-mac-x64.dmg',
+    win: { x64: 'OmniDesk-Hub-win-x64.exe', arm64: 'OmniDesk-Hub-win-arm64.exe' }
+  }
   var reduceMotion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false }
 
   function all(sel, scope) {
@@ -26,6 +32,29 @@
     var ua = navigator.userAgent || ''
     // iPhones and iPods say "like Mac OS X"; iPads ask for the desktop site as a Macintosh but have touch points.
     return /Macintosh/.test(ua) && !/iPhone|iPad|iPod|Android/.test(ua) && !(navigator.maxTouchPoints > 1)
+  }
+
+  function isWindows() {
+    var ua = navigator.userAgent || ''
+    return /Windows NT/.test(ua) && !/Windows Phone|Xbox/.test(ua)
+  }
+
+  /** 'mac' | 'windows' | 'other' — by the user agent (what the visitor's browser says about its OS). */
+  function visitorPlatform() {
+    return isWindows() ? 'windows' : isMac() ? 'mac' : 'other'
+  }
+
+  /**
+   * Windows on Arm or a 64-bit Intel/AMD PC: Chromium browsers tell through the architecture hint; everything else
+   * gets the x64 installer (Windows on Arm runs it too, emulated).
+   */
+  function windowsArch() {
+    var d = navigator.userAgentData
+    if (!d || typeof d.getHighEntropyValues !== 'function') return Promise.resolve('x64')
+    return d.getHighEntropyValues(['architecture', 'bitness']).then(
+      function (v) { return v && v.architecture === 'arm' ? 'arm64' : 'x64' },
+      function () { return 'x64' }
+    )
   }
 
   function formatSize(bytes) {
@@ -54,6 +83,10 @@
     all('[data-download]').forEach(function (a) { a.setAttribute('href', href) })
   }
 
+  function showAll(sel, on) {
+    all(sel).forEach(function (el) { el.hidden = !on })
+  }
+
   function showRelease(release, primary) {
     var version = String(release.tag_name || release.name || '').replace(/^v/i, '').replace(/[^\w.+-]/g, '').slice(0, 32)
     var size = primary && primary.size > 0 ? formatSize(primary.size) : ''
@@ -67,38 +100,105 @@
     })
   }
 
-  function applyRelease(release) {
-    var primary = asset(release, ASSETS.arm) || asset(release, ASSETS.armZip)
-    setDownloadHref(primary ? primary.browser_download_url : RELEASES_PAGE)
-    if (primary) showRelease(release, primary)
+  var OTHER_WINDOWS_TEXT = { x64: 'Intel or AMD PC? Get the 64-bit build', arm64: 'Windows on Arm? Get the Arm build' }
+
+  /** A Windows visitor: the installer for their PC on every button, Windows' requirements, the Windows steps. */
+  function showWindows(arch) {
+    setDownloadHref(LATEST_DOWNLOAD + ASSETS.win[arch])
+    all('[data-download-label]').forEach(function (l) { l.textContent = 'Download for Windows' })
+    showAll('[data-req="mac"]', false)
+    showAll('[data-req="windows"]', true)
+    showAll('[data-also="windows"]', false)
+    showAll('[data-also="mac"]', true)
+    // Key glyphs a PC writes differently (⌘K → Ctrl K).
+    all('[data-key-pc]').forEach(function (k) {
+      k.textContent = k.getAttribute('data-key-pc')
+      k.setAttribute('data-pc', '')
+    })
+  }
+
+  function applyRelease(release, platform, arch) {
+    var mac = asset(release, ASSETS.arm) || asset(release, ASSETS.armZip)
+    var win = { x64: asset(release, ASSETS.win.x64), arm64: asset(release, ASSETS.win.arm64) }
+    all('[data-download-mac]').forEach(function (a) { a.setAttribute('href', mac ? mac.browser_download_url : RELEASES_PAGE) })
+    all('[data-download-win]').forEach(function (a) {
+      var w = win[a.getAttribute('data-download-win')]
+      if (w) return a.setAttribute('href', w.browser_download_url)
+      a.hidden = true
+      // …and the " · " between it and its neighbour.
+      ;[a.previousSibling, a.nextSibling].some(function (n) {
+        if (!n || n.nodeType !== 3 || n.textContent.indexOf('·') < 0) return false
+        n.textContent = n.textContent.replace(/\s*·\s*/, ' ')
+        return true
+      })
+    })
+    if (platform === 'windows') {
+      // The build for this PC, or the other one (Windows on Arm runs x64 too; an Intel PC can't run Arm).
+      var mine = win[arch] || (arch === 'arm64' ? win.x64 : null)
+      setDownloadHref(mine ? mine.browser_download_url : RELEASES_PAGE)
+      if (mine) showRelease(release, mine)
+      else
+        all('[data-platform-note]').forEach(function (p) {
+          p.textContent = 'This release has no Windows installer yet — the releases page lists every build.'
+          p.hidden = false
+        })
+      var otherArch = mine === win.x64 ? 'arm64' : 'x64'
+      var other = mine ? win[otherArch] : null
+      all('[data-win-other]').forEach(function (p) {
+        if (!other) return
+        var link = p.querySelector('[data-win-other-link]')
+        link.setAttribute('href', other.browser_download_url)
+        link.textContent = OTHER_WINDOWS_TEXT[otherArch]
+        p.hidden = false
+      })
+      return
+    }
+    setDownloadHref(mac ? mac.browser_download_url : RELEASES_PAGE)
+    if (mac) showRelease(release, mac)
     var intel = asset(release, ASSETS.intel)
     all('[data-intel]').forEach(function (p) {
       if (!intel) return
       p.querySelector('[data-intel-link]').setAttribute('href', intel.browser_download_url)
       p.hidden = false
     })
+    // No Windows installer in this release: no "Also for Windows" line.
+    if (!win.x64 && !win.arm64) showAll('[data-also="windows"]', false)
   }
 
-  function loadRelease() {
-    if (!window.fetch) return
+  function fetchRelease() {
+    if (!window.fetch) return Promise.reject(new Error('no fetch'))
     var ctrl = window.AbortController ? new AbortController() : null
     var timer = setTimeout(function () { if (ctrl) ctrl.abort() }, 8000)
-    fetch(API_LATEST, { credentials: 'omit', referrerPolicy: 'no-referrer', signal: ctrl ? ctrl.signal : undefined, headers: { Accept: 'application/vnd.github+json' } })
+    return fetch(API_LATEST, { credentials: 'omit', referrerPolicy: 'no-referrer', signal: ctrl ? ctrl.signal : undefined, headers: { Accept: 'application/vnd.github+json' } })
       .then(function (res) {
         if (!res.ok) throw new Error('GitHub answered ' + res.status)
         return res.json()
       })
-      .then(applyRelease)
-      .catch(function () {
-        // No release yet, rate-limited or offline: the releases page always works.
-        setDownloadHref(RELEASES_PAGE)
-      })
-      .then(function () { clearTimeout(timer) })
+      .then(
+        function (release) { clearTimeout(timer); return release },
+        function (e) { clearTimeout(timer); throw e }
+      )
   }
 
   function initDownloads() {
-    if (!isMac()) all('[data-platform-note]').forEach(function (p) { p.hidden = false })
-    loadRelease()
+    var platform = visitorPlatform()
+    root.setAttribute('data-visitor', platform)
+    // The install steps for this OS (a Mac's or Windows'; both for anyone else).
+    if (platform !== 'other') showAll('[data-steps]:not([data-steps="' + platform + '"])', false)
+    if (platform === 'other') showAll('[data-platform-note]', true)
+    var arch = platform === 'windows' ? windowsArch() : Promise.resolve(null)
+    if (platform === 'windows') {
+      showWindows('x64')
+      arch.then(function (a) { if (a !== 'x64') showWindows(a) })
+    }
+    if (!window.fetch) return
+    fetchRelease().then(
+      function (release) { return arch.then(function (a) { applyRelease(release, platform, a) }) },
+      function () {
+        // No release yet, rate-limited or offline: the releases page always works.
+        setDownloadHref(RELEASES_PAGE)
+      }
+    )
   }
 
   /* -------------------------------- videos ------------------------------- */
