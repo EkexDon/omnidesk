@@ -35,8 +35,8 @@
   <link rel="preload" href="fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/geist-mono.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <script src="site.js"></script>
+  <link rel="stylesheet" href="styles.css?v=1.3.0">
+  <script src="site.js?v=1.3.0"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -410,7 +410,7 @@
             <p class="eyebrow reveal"><span class="new">New</span> Claude connector</p>
             <h2 class="display reveal" id="claude-title">Ask Claude about your desk.</h2>
           </div>
-          <p class="section-lede claude__lede reveal">OmniDesk Hub now has a connector for Claude. In Claude Desktop or Claude Code, Claude can search everything you keep here, read it, link what belongs together and write mail drafts — which you read and send yourself.</p>
+          <p class="section-lede claude__lede reveal">OmniDesk Hub now has a connector for Claude. In Claude Desktop or Claude Code, Claude can search everything you keep here, read it, link what belongs together, add notes, tasks and events — and write mail drafts, which you read and send yourself.</p>
         </header>
 
         <article class="mod mod--a claude__mod" aria-labelledby="claude-answers-title">
@@ -428,6 +428,7 @@
               <li><strong>One question, every module</strong> — “What did we decide about the Atlas beta?” finds the thread, the notes and the task</li>
               <li><strong>Replies, ready to check</strong> — Claude drafts a reply with the right subject, recipients and quote, and OmniDesk opens it for you</li>
               <li><strong>Things tied together</strong> — Claude can link a note to a task or a mail to a document; the links show up as backlinks</li>
+              <li><strong>Work done for you</strong> — “Make a task for Friday”, “put the call on Monday at 2”, “save this as a note”, “tick off the launch tasks”</li>
             </ul>
           </div>
         </article>
@@ -435,12 +436,12 @@
         <article class="mod mod--b claude__mod" aria-labelledby="claude-control-title">
           <div class="mod__copy reveal">
             <p class="mod__kicker">You stay in charge</p>
-            <h3 class="mod__title" id="claude-control-title">Off until you turn it on. Never sends a mail.</h3>
+            <h3 class="mod__title" id="claude-control-title">Off until you turn it on. Never sends, never deletes.</h3>
             <p>The connector runs on your computer and talks to OmniDesk Hub directly — no server of ours, nothing reachable from the network. Claude only gets in with the access key you copy from Settings.</p>
             <ul class="points">
               <li>Claude <strong>can’t send mail</strong> — every message stays a draft until you press Send</li>
-              <li>Claude can’t change or delete your tasks, events, notes or documents</li>
-              <li>Every link Claude adds or removes shows a notice with <strong>Undo</strong></li>
+              <li>Claude can add notes, tasks and events and tick tasks done — but it can’t delete your notes, tasks, events or mail, or edit your documents</li>
+              <li>Everything Claude adds or changes shows a notice with <strong>Undo</strong></li>
               <li>Turn it off, or make a new access key, and Claude is disconnected at once</li>
             </ul>
           </div>
@@ -467,6 +468,7 @@
               <li>“Summarize what Leo wrote about the Q3 numbers and draft a short reply.”</li>
               <li>“What’s on my calendar this week that has to do with the launch?”</li>
               <li>“Find my notes on the onboarding review and link them to the review task.”</li>
+              <li>“Make a task to send the slides by Friday and put a 30-minute call on Monday at 2.”</li>
               <li>“Which tasks mention the budget, and what do the related mails say?”</li>
             </ul>
           </div>
@@ -615,8 +617,8 @@
             <p>Any IMAP and SMTP account that signs in with a password or an app password — iCloud, Gmail, Fastmail, Yahoo, GMX, WEB.DE or your own server. Sign-in through a browser (OAuth) isn’t supported yet, so work accounts that only allow that can’t connect.</p>
           </details>
           <details class="qa reveal">
-            <summary>Can Claude send mail or change my things?</summary>
-            <p>No. Through the connector Claude can search, read, open entries in the window, link entries and write mail drafts. Sending isn’t possible at all — a draft waits in <em>Drafts</em> until you press Send. Tasks, events, notes and documents stay as they are, and every link Claude changes can be undone. See <a href="#claude">Claude connector</a>.</p>
+            <summary>Can Claude send mail or delete my things?</summary>
+            <p>No. Through the connector Claude can search, read, open entries in the window, link entries, write mail drafts, add notes, tasks and events, and tick tasks done. Sending isn’t possible at all — a draft waits in <em>Drafts</em> until you press Send. Claude can’t delete your notes, tasks, events or mail or edit your documents, and everything it adds or changes can be undone. See <a href="#claude">Claude connector</a>.</p>
           </details>
           <details class="qa reveal">
             <summary>Claude says OmniDesk Hub isn’t running — what now?</summary>
