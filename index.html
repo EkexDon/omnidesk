@@ -65,6 +65,7 @@
         <a href="#modules">Modules</a>
         <a href="#connected">Connected</a>
         <a href="#together">Groups</a>
+        <a href="#claude">Claude <span class="new new--nav">New</span></a>
         <a href="#privacy">Privacy</a>
         <a href="#install">Install</a>
         <a href="#faq">FAQ</a>
@@ -402,6 +403,86 @@
       </div>
     </section>
 
+    <section class="claude" id="claude" aria-labelledby="claude-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal"><span class="new">New</span> Claude connector</p>
+            <h2 class="display reveal" id="claude-title">Ask Claude about your desk.</h2>
+          </div>
+          <p class="section-lede claude__lede reveal">OmniDesk Hub now has a connector for Claude. In Claude Desktop or Claude Code, Claude can search everything you keep here, read it, link what belongs together and write mail drafts — which you read and send yourself.</p>
+        </header>
+
+        <article class="mod mod--a claude__mod" aria-labelledby="claude-answers-title">
+          <div class="mod__media mod__media--shot reveal">
+            <picture>
+              <source srcset="media/claude/draft-light.png" media="(prefers-color-scheme: light)">
+              <img src="media/claude/draft-dark.png" width="1216" height="792" loading="lazy" alt="OmniDesk Hub’s Mail with a reply Claude drafted: “Re: Q3 numbers — board pack” to Leo Tanaka, Claude’s text above the signature and Leo’s quoted message, the Send button still waiting">
+            </picture>
+          </div>
+          <div class="mod__copy reveal">
+            <p class="mod__kicker">What it’s good for</p>
+            <h3 class="mod__title" id="claude-answers-title">Answers from your own work, not from guesses.</h3>
+            <p>Ask in plain words. Claude looks through your mail, calendar, tasks, documents, notes, PDFs, boards and decks at once, reads what it finds and answers with it.</p>
+            <ul class="points">
+              <li><strong>One question, every module</strong> — “What did we decide about the Atlas beta?” finds the thread, the notes and the task</li>
+              <li><strong>Replies, ready to check</strong> — Claude drafts a reply with the right subject, recipients and quote, and OmniDesk opens it for you</li>
+              <li><strong>Things tied together</strong> — Claude can link a note to a task or a mail to a document; the links show up as backlinks</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="mod mod--b claude__mod" aria-labelledby="claude-control-title">
+          <div class="mod__copy reveal">
+            <p class="mod__kicker">You stay in charge</p>
+            <h3 class="mod__title" id="claude-control-title">Off until you turn it on. Never sends a mail.</h3>
+            <p>The connector runs on your computer and talks to OmniDesk Hub directly — no server of ours, nothing reachable from the network. Claude only gets in with the access key you copy from Settings.</p>
+            <ul class="points">
+              <li>Claude <strong>can’t send mail</strong> — every message stays a draft until you press Send</li>
+              <li>Claude can’t change or delete your tasks, events, notes or documents</li>
+              <li>Every link Claude adds or removes shows a notice with <strong>Undo</strong></li>
+              <li>Turn it off, or make a new access key, and Claude is disconnected at once</li>
+            </ul>
+          </div>
+          <div class="mod__media mod__media--shot reveal">
+            <picture>
+              <source srcset="media/claude/settings-light.png" media="(prefers-color-scheme: light)">
+              <img src="media/claude/settings-dark.png" width="1216" height="792" loading="lazy" alt="Settings → Claude in OmniDesk Hub: the switch “Let Claude use OmniDesk Hub” turned on, the status “Connected (1)”, buttons to copy the setup for Claude Desktop and Claude Code, and “New access key…”">
+            </picture>
+          </div>
+        </article>
+
+        <p class="steps__for reveal">Set it up in two minutes</p>
+        <ol class="steps steps--after-for">
+          <li class="step reveal"><span class="step__n" aria-hidden="true">1</span><h3>Turn it on</h3><p>In OmniDesk Hub open <strong>Settings → Claude</strong> and switch on <strong>Let Claude use OmniDesk Hub</strong>.</p></li>
+          <li class="step reveal"><span class="step__n" aria-hidden="true">2</span><h3>Copy the setup</h3><p>Click <strong>Copy setup for Claude Desktop</strong> — or <strong>for Claude Code</strong> if you work in the terminal.</p></li>
+          <li class="step reveal"><span class="step__n" aria-hidden="true">3</span><h3>Paste it into Claude</h3><p>Claude Desktop: <strong>Settings → Developer → Edit Config</strong>, add it to <code class="inline-code">mcpServers</code> in the file that opens, save and restart Claude. Claude Code: paste the command into your terminal and run it.</p></li>
+          <li class="step reveal"><span class="step__n" aria-hidden="true">4</span><h3>Ask</h3><p>Keep OmniDesk Hub open and ask Claude about your work. The status in Settings shows <strong>Connected</strong>.</p></li>
+        </ol>
+
+        <div class="claude__more">
+          <div class="claude__try reveal">
+            <h3>Things to try</h3>
+            <ul class="asks">
+              <li>“Summarize what Leo wrote about the Q3 numbers and draft a short reply.”</li>
+              <li>“What’s on my calendar this week that has to do with the launch?”</li>
+              <li>“Find my notes on the onboarding review and link them to the review task.”</li>
+              <li>“Which tasks mention the budget, and what do the related mails say?”</li>
+            </ul>
+          </div>
+          <div class="claude__know reveal">
+            <h3>Good to know</h3>
+            <ul class="points">
+              <li>You need <strong>Node.js 20 or later</strong> on your computer — Claude starts the connector with it. Settings tells you if it’s missing.</li>
+              <li>On a Mac, run OmniDesk Hub from your <strong>Applications</strong> folder, so the copied setup keeps working after a restart.</li>
+              <li>Claude follows the workspace you have open — Personal, or a group. In a group it can read what the other members wrote, so only turn it on there if that’s fine with them.</li>
+              <li>What Claude searches and reads becomes part of your Claude conversation and is sent to Anthropic, like anything else you share with Claude.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="privacy" id="privacy" aria-labelledby="privacy-title">
       <div class="wrap privacy__grid">
         <header class="privacy__head">
@@ -425,6 +506,10 @@
           <div class="net__row reveal">
             <dt>When you’re in a group or a Jam</dt>
             <dd>Public relays help the members’ computers find each other (by default the MQTT brokers of HiveMQ, EMQX and Eclipse Mosquitto) and STUN servers from Google and Cloudflare find a direct route. The content then travels encrypted, straight between those computers. A TURN relay is used only if you add one.</dd>
+          </div>
+          <div class="net__row reveal">
+            <dt>When you turn on the Claude connector</dt>
+            <dd>Nothing goes over the network from OmniDesk Hub — Claude’s connector on your computer talks to it directly. What Claude searches and reads becomes part of your Claude conversation, which Claude sends to Anthropic.</dd>
           </div>
           <div class="net__row reveal">
             <dt>When you open or fetch a link</dt>
@@ -528,6 +613,14 @@
           <details class="qa reveal">
             <summary>Which mail accounts work?</summary>
             <p>Any IMAP and SMTP account that signs in with a password or an app password — iCloud, Gmail, Fastmail, Yahoo, GMX, WEB.DE or your own server. Sign-in through a browser (OAuth) isn’t supported yet, so work accounts that only allow that can’t connect.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Can Claude send mail or change my things?</summary>
+            <p>No. Through the connector Claude can search, read, open entries in the window, link entries and write mail drafts. Sending isn’t possible at all — a draft waits in <em>Drafts</em> until you press Send. Tasks, events, notes and documents stay as they are, and every link Claude changes can be undone. See <a href="#claude">Claude connector</a>.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Claude says OmniDesk Hub isn’t running — what now?</summary>
+            <p>Open OmniDesk Hub and check that <em>Settings → Claude</em> is switched on — Claude reaches it only while it runs. If Claude says the access key was rejected, copy the setup again and replace the old one in Claude. Up to four Claude windows or sessions can be connected at the same time.</p>
           </details>
           <details class="qa reveal">
             <summary>Do the others in my group need an account?</summary>
