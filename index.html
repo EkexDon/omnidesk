@@ -35,8 +35,8 @@
   <link rel="preload" href="fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/geist-mono.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=1.3.0">
-  <script src="site.js?v=1.3.0"></script>
+  <link rel="stylesheet" href="styles.css?v=1.4.0">
+  <script src="site.js?v=1.4.0"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -267,7 +267,7 @@
             <div class="mod__copy reveal">
               <p class="mod__kicker">PDF</p>
               <h3 class="mod__title" id="pdf-title">Read with a pen in hand.</h3>
-              <p>Highlights, underlines and sticky notes, find, outline and thumbnails. <em>Take notes</em> opens a note right beside the page, and the annotated PDF exports with your marks in it.</p>
+              <p>Highlights, underlines and sticky notes, find, outline and thumbnails. <em>Take notes</em> opens a note right beside the page, and the annotated PDF exports with your marks in it. Sort the library into <em>folders</em> — your files stay where they are.</p>
             </div>
           </article>
         </div>
@@ -429,6 +429,7 @@
               <li><strong>Replies, ready to check</strong> — Claude drafts a reply with the right subject, recipients and quote, and OmniDesk opens it for you</li>
               <li><strong>Things tied together</strong> — Claude can link a note to a task or a mail to a document; the links show up as backlinks</li>
               <li><strong>Work done for you</strong> — “Make a task for Friday”, “put the call on Monday at 2”, “save this as a note”, “tick off the launch tasks”</li>
+              <li><strong>Order, too</strong> — Claude makes to-do boards, folders in Notes, Docs and the PDF library, sorts things into them and writes whole documents</li>
             </ul>
           </div>
         </article>
@@ -440,7 +441,7 @@
             <p>The connector runs on your computer and talks to OmniDesk Hub directly — no server of ours, nothing reachable from the network. Claude only gets in with the access key you copy from Settings.</p>
             <ul class="points">
               <li>Claude <strong>can’t send mail</strong> — every message stays a draft until you press Send</li>
-              <li>Claude can add notes, tasks and events and tick tasks done — but it can’t delete your notes, tasks, events or mail, or edit your documents</li>
+              <li>Claude can add notes, tasks, events, boards, folders and documents and tick tasks done — but it can’t delete your notes, tasks, events, documents or mail, or edit a document you wrote</li>
               <li>Everything Claude adds or changes shows a notice with <strong>Undo</strong></li>
               <li>Turn it off, or make a new access key, and Claude is disconnected at once</li>
             </ul>
@@ -469,6 +470,7 @@
               <li>“What’s on my calendar this week that has to do with the launch?”</li>
               <li>“Find my notes on the onboarding review and link them to the review task.”</li>
               <li>“Make a task to send the slides by Friday and put a 30-minute call on Monday at 2.”</li>
+              <li>“Make a board for the VR level with To do, Doing and Done, and put my lecture PDFs in a folder called Uni.”</li>
               <li>“Which tasks mention the budget, and what do the related mails say?”</li>
             </ul>
           </div>
@@ -618,7 +620,7 @@
           </details>
           <details class="qa reveal">
             <summary>Can Claude send mail or delete my things?</summary>
-            <p>No. Through the connector Claude can search, read, open entries in the window, link entries, write mail drafts, add notes, tasks and events, and tick tasks done. Sending isn’t possible at all — a draft waits in <em>Drafts</em> until you press Send. Claude can’t delete your notes, tasks, events or mail or edit your documents, and everything it adds or changes can be undone. See <a href="#claude">Claude connector</a>.</p>
+            <p>No. Through the connector Claude can search, read, open entries in the window, link entries, write mail drafts, add notes, tasks, events, boards, folders and documents, sort things into folders and tick tasks done. Sending isn’t possible at all — a draft waits in <em>Drafts</em> until you press Send. Claude can’t delete your notes, tasks, events, documents or mail or edit a document you wrote, and everything it adds or changes can be undone. See <a href="#claude">Claude connector</a>.</p>
           </details>
           <details class="qa reveal">
             <summary>Claude says OmniDesk Hub isn’t running — what now?</summary>
