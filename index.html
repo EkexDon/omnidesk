@@ -35,8 +35,8 @@
   <link rel="preload" href="fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/geist-mono.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=1.4.0">
-  <script src="site.js?v=1.4.0"></script>
+  <link rel="stylesheet" href="styles.css?v=1.5.0">
+  <script src="site.js?v=1.5.0"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -65,7 +65,8 @@
         <a href="#modules">Modules</a>
         <a href="#connected">Connected</a>
         <a href="#together">Groups</a>
-        <a href="#claude">Claude <span class="new new--nav">New</span></a>
+        <a href="#pages">Pages <span class="new new--nav">New</span></a>
+        <a href="#claude">Claude</a>
         <a href="#privacy">Privacy</a>
         <a href="#install">Install</a>
         <a href="#faq">FAQ</a>
@@ -403,11 +404,64 @@
       </div>
     </section>
 
+    <section class="claude" id="pages" aria-labelledby="pages-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal"><span class="new">New</span> Pages</p>
+            <h2 class="display reveal" id="pages-title">One page for everything that belongs together.</h2>
+          </div>
+          <p class="section-lede claude__lede reveal">Pages are free-form pages you write in blocks — like Notion, but inside your desk. Put text, to-dos and subpages next to the things you already keep here: a task board, this week’s events, a note, a deck. They stay live: tick a task on the page and it’s done in Tasks.</p>
+        </header>
+
+        <article class="mod mod--a claude__mod" aria-labelledby="pages-write-title">
+          <div class="mod__media mod__media--shot reveal">
+            <picture>
+              <source srcset="media/pages/page-light.png" media="(prefers-color-scheme: light)">
+              <img src="media/pages/page-dark.png" width="1216" height="792" loading="lazy" alt="A page in OmniDesk Hub called “Launch week” with a violet cover and a rocket icon, a short intro, two to-dos and below them the live “Product Launch” task board; on the left the page tree with favorites">
+            </picture>
+          </div>
+          <div class="mod__copy reveal">
+            <p class="mod__kicker">Write in blocks</p>
+            <h3 class="mod__title" id="pages-write-title">Type “/” and build the page you need.</h3>
+            <p>Headings, to-dos, toggles, callouts, quotes, code, tables, images and columns — pick them from the “/” menu or type Markdown. Drag any block by its handle.</p>
+            <ul class="points">
+              <li><strong>Pages inside pages</strong> — nest as deep as you like, favorite the ones you use daily</li>
+              <li><strong>Make it yours</strong> — an emoji icon and a cover: a colour gradient or your own picture</li>
+              <li><strong>Mention anything</strong> — type “@” to link a mail, task, note or document right in the text</li>
+              <li><strong>Nothing lost</strong> — deleted pages wait a day in the Trash, and every delete has Undo</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="mod mod--b claude__mod" aria-labelledby="pages-live-title">
+          <div class="mod__copy reveal">
+            <p class="mod__kicker">Live cards</p>
+            <h3 class="mod__title" id="pages-live-title">Your board, your week and your notes — on one page.</h3>
+            <p>Drop anything from another module onto a page, use “Send to → Pages”, or type “/board”, “/calendar”, “/mail”. It shows up as a live card that changes when the original does.</p>
+            <ul class="points">
+              <li><strong>Tasks</strong> — a board as a list or a mini kanban; tick tasks and add new ones right there</li>
+              <li><strong>Calendar</strong> — the next seven days, today or the week, from all calendars or the ones you pick</li>
+              <li><strong>Notes, Docs, Whiteboards, Slides</strong> — previews, outlines, board snapshots and a slide strip you can present from</li>
+              <li><strong>Mail, PDFs, music</strong> — a thread you can reply to, a PDF with its first page, a song you can play</li>
+              <li><strong>In a group</strong> — write a page together live; your mail, PDFs and music always stay personal</li>
+            </ul>
+          </div>
+          <div class="mod__media mod__media--shot reveal">
+            <picture>
+              <source srcset="media/pages/cards-light.png" media="(prefers-color-scheme: light)">
+              <img src="media/pages/cards-dark.png" width="1216" height="792" loading="lazy" alt="Further down the “Launch week” page: the task board’s To do, In progress and Review columns as a live card, and below it a calendar card with today’s events">
+            </picture>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="claude" id="claude" aria-labelledby="claude-title">
       <div class="wrap">
         <header class="section-head section-head--split">
           <div>
-            <p class="eyebrow reveal"><span class="new">New</span> Claude connector</p>
+            <p class="eyebrow reveal">Claude connector</p>
             <h2 class="display reveal" id="claude-title">Ask Claude about your desk.</h2>
           </div>
           <p class="section-lede claude__lede reveal">OmniDesk Hub now has a connector for Claude. In Claude Desktop or Claude Code, Claude can search everything you keep here, read it, link what belongs together, add notes, tasks and events — and write mail drafts, which you read and send yourself.</p>
@@ -430,6 +484,7 @@
               <li><strong>Things tied together</strong> — Claude can link a note to a task or a mail to a document; the links show up as backlinks</li>
               <li><strong>Work done for you</strong> — “Make a task for Friday”, “put the call on Monday at 2”, “save this as a note”, “tick off the launch tasks”</li>
               <li><strong>Order, too</strong> — Claude makes to-do boards, folders in Notes, Docs and the PDF library, sorts things into them and writes whole documents</li>
+              <li><strong>Pages</strong> — “Make a page for the launch with the board and this week’s events” — Claude builds it, adds to it, renames and moves it</li>
             </ul>
           </div>
         </article>
@@ -441,7 +496,7 @@
             <p>The connector runs on your computer and talks to OmniDesk Hub directly — no server of ours, nothing reachable from the network. Claude only gets in with the access key you copy from Settings.</p>
             <ul class="points">
               <li>Claude <strong>can’t send mail</strong> — every message stays a draft until you press Send</li>
-              <li>Claude can add notes, tasks, events, boards, folders and documents and tick tasks done — but it can’t delete your notes, tasks, events, documents or mail, or edit a document you wrote</li>
+              <li>Claude can add notes, tasks, events, boards, folders, documents and pages and tick tasks done — but it can’t delete your notes, tasks, events, documents, pages or mail, or rewrite what you wrote</li>
               <li>Everything Claude adds or changes shows a notice with <strong>Undo</strong></li>
               <li>Turn it off, or make a new access key, and Claude is disconnected at once</li>
             </ul>
