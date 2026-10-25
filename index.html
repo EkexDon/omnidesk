@@ -35,8 +35,8 @@
   <link rel="preload" href="fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/geist-mono.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=1.5.0">
-  <script src="site.js?v=1.5.0"></script>
+  <link rel="stylesheet" href="styles.css?v=1.5.2">
+  <script src="site.js?v=1.5.2"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -65,7 +65,8 @@
         <a href="#modules">Modules</a>
         <a href="#connected">Connected</a>
         <a href="#together">Groups</a>
-        <a href="#pages">Pages <span class="new new--nav">New</span></a>
+        <a href="#pages">Pages</a>
+        <a href="#formats">Formats <span class="new new--nav">New</span></a>
         <a href="#claude">Claude</a>
         <a href="#privacy">Privacy</a>
         <a href="#install">Install</a>
@@ -408,7 +409,7 @@
       <div class="wrap">
         <header class="section-head section-head--split">
           <div>
-            <p class="eyebrow reveal"><span class="new">New</span> Pages</p>
+            <p class="eyebrow reveal">Pages</p>
             <h2 class="display reveal" id="pages-title">One page for everything that belongs together.</h2>
           </div>
           <p class="section-lede claude__lede reveal">Pages are free-form pages you write in blocks — like Notion, but inside your desk. Put text, to-dos and subpages next to the things you already keep here: a task board, this week’s events, a note, a deck. They stay live: tick a task on the page and it’s done in Tasks.</p>
@@ -457,6 +458,75 @@
       </div>
     </section>
 
+    <section class="claude" id="formats" aria-labelledby="formats-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal"><span class="new">New</span> PowerPoint, Keynote &amp; Pages</p>
+            <h2 class="display reveal" id="formats-title">Open the decks you were sent. Hand back the ones you made.</h2>
+          </div>
+          <p class="section-lede claude__lede reveal">Drop a PowerPoint file on Slides and it becomes a deck you can edit, present and send back as .pptx. Keynote and Pages files work too — and Claude can now make a deck for you from a few words. Files are read on your computer, as data: nothing in them is ever run or fetched.</p>
+        </header>
+
+        <article class="mod mod--a claude__mod" aria-labelledby="formats-import-title">
+          <div class="mod__media mod__media--shot reveal">
+            <picture>
+              <source srcset="media/formats/report-light.png" media="(prefers-color-scheme: light)">
+              <img src="media/formats/report-dark.png" width="1440" height="900" loading="lazy" alt="OmniDesk Hub’s Slides library right after importing “Q3 review.pptx”: a dialog says five slides were imported and lists what was left out — an area chart Slides can’t show — and what was changed to fit: the font Calibri shown as Geist, and tables that became shapes">
+            </picture>
+          </div>
+          <div class="mod__copy reveal">
+            <p class="mod__kicker">PowerPoint in, PowerPoint out</p>
+            <h3 class="mod__title" id="formats-import-title">An import that tells you what came along.</h3>
+            <p>Choose <strong>Import PowerPoint or Keynote…</strong>, drop a .pptx on the library, or open the file with OmniDesk Hub. You get a new deck and a short report: what was left out, and what changed to fit.</p>
+            <ul class="points">
+              <li><strong>Slides, text and pictures</strong> — titles, bullets, bold and colours, shapes, pictures (crops kept for PNG; other pictures are fitted), backgrounds</li>
+              <li><strong>Notes and hidden slides</strong> — speaker notes come along, and so do slides marked as hidden</li>
+              <li><strong>Charts and tables</strong> — bar, line, pie and doughnut charts come in as charts, with their first series; a table arrives as shapes you can still move</li>
+              <li><strong>Safe by design</strong> — no macros, no embedded programs, no link in the file is followed, and oversized or damaged files are refused</li>
+              <li><strong>And back again</strong> — export as .pptx with real slide layouts, so you can keep working in PowerPoint</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="mod mod--b claude__mod" aria-labelledby="formats-apple-title">
+          <div class="mod__copy reveal">
+            <p class="mod__kicker">Keynote and Pages</p>
+            <h3 class="mod__title" id="formats-apple-title">Apple’s files, through Apple’s own apps.</h3>
+            <p>On a Mac with Keynote or Pages, OmniDesk Hub asks the app to do the converting, quietly in the background. macOS asks once whether it may.</p>
+            <ul class="points">
+              <li><strong>Keynote (.key)</strong> — import a deck as slides, or export one from <em>Export → Keynote</em></li>
+              <li><strong>Pages (.pages)</strong> — import a document with its headings, lists, tables and pictures, or save a document as .pages</li>
+              <li><strong>No Keynote or Pages, or on Windows?</strong> — a file still opens as its preview picture, and exporting offers PowerPoint and Word, which Keynote and Pages open directly</li>
+              <li><strong>Nothing leaves your computer</strong> — conversion happens on this Mac, on a private copy, so a document you have open is never touched</li>
+            </ul>
+          </div>
+          <div class="mod__media mod__media--shot reveal">
+            <picture>
+              <source srcset="media/formats/deck-light.png" media="(prefers-color-scheme: light)">
+              <img src="media/formats/deck-dark.png" width="1216" height="792" loading="lazy" alt="The imported “Q3 review” deck open in Slides: its five slides in the sorter on the left, the title slide with its bullets on the canvas and the speaker notes underneath">
+            </picture>
+          </div>
+        </article>
+
+        <article class="mod mod--wide claude__mod" aria-labelledby="formats-claude-title">
+          <div class="mod__copy mod__copy--row reveal">
+            <div>
+              <p class="mod__kicker">With Claude</p>
+              <h3 class="mod__title" id="formats-claude-title">Claude makes decks.</h3>
+              <p>Ask Claude for a presentation and it builds one in Slides — real layouts, speaker notes, pictures you already keep here and a chart of a task board. Ask again and it adds slides to a deck you name.</p>
+            </div>
+            <ul class="points">
+              <li><strong>“Make a five-slide deck about the launch, with notes”</strong> — title, content, two columns, section and closing slides</li>
+              <li><strong>Up to 40 slides at a time</strong> — and a deck is yours to edit like any other</li>
+              <li><strong>Undo keeps your work</strong> — it removes only the slides you haven’t changed, and Claude can’t delete a deck</li>
+              <li><strong>In a group</strong> — your mail, PDFs and music always stay personal</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="claude" id="claude" aria-labelledby="claude-title">
       <div class="wrap">
         <header class="section-head section-head--split">
@@ -485,6 +555,7 @@
               <li><strong>Work done for you</strong> — “Make a task for Friday”, “put the call on Monday at 2”, “save this as a note”, “tick off the launch tasks”</li>
               <li><strong>Order, too</strong> — Claude makes to-do boards, folders in Notes, Docs and the PDF library, sorts things into them and writes whole documents</li>
               <li><strong>Pages</strong> — “Make a page for the launch with the board and this week’s events” — Claude builds it, adds to it, renames and moves it</li>
+              <li><strong>Decks</strong> — “Turn these notes into a five-slide deck” — Claude makes the slides, with speaker notes, and adds more later</li>
             </ul>
           </div>
         </article>
@@ -496,7 +567,7 @@
             <p>The connector runs on your computer and talks to OmniDesk Hub directly — no server of ours, nothing reachable from the network. Claude only gets in with the access key you copy from Settings.</p>
             <ul class="points">
               <li>Claude <strong>can’t send mail</strong> — every message stays a draft until you press Send</li>
-              <li>Claude can add notes, tasks, events, boards, folders, documents and pages and tick tasks done — but it can’t delete your notes, tasks, events, documents, pages or mail, or rewrite what you wrote</li>
+              <li>Claude can add notes, tasks, events, boards, folders, documents, pages and decks and tick tasks done — but it can’t delete your notes, tasks, events, documents, pages, decks or mail, or rewrite what you wrote</li>
               <li>Everything Claude adds or changes shows a notice with <strong>Undo</strong></li>
               <li>Turn it off, or make a new access key, and Claude is disconnected at once</li>
             </ul>
@@ -526,6 +597,7 @@
               <li>“Find my notes on the onboarding review and link them to the review task.”</li>
               <li>“Make a task to send the slides by Friday and put a 30-minute call on Monday at 2.”</li>
               <li>“Make a board for the VR level with To do, Doing and Done, and put my lecture PDFs in a folder called Uni.”</li>
+              <li>“Make a six-slide deck about the Atlas beta with speaker notes and a chart of the launch board.”</li>
               <li>“Which tasks mention the budget, and what do the related mails say?”</li>
             </ul>
           </div>
